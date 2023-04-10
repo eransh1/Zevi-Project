@@ -7,10 +7,10 @@
     position: relative;
 }
 .inputSearch{
-    width: 96%;
+    width: 96.4%;
     height: 100%;
     border-radius: 20px;
-    border: none;
+    border: 0.686747px solid rgba(0, 0, 0, 0.5);
     padding-left: 2rem;
     font-family: 'Inter';
 font-style: normal;

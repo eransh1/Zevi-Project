@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from 'react'
 import styles from "./LatestTrends.module.css"
 import Card from './Card/Card'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
+import { setProducts } from '../../redux/productsSlice'
 
 const LatestTrends = () => {
     const navigate=useNavigate()
     const[latestTrendData,setLatestTrendData]=useState([])
     const [dataToShow,setDataToShow]=useState([])
     const searchData=useSelector((state)=>state.search)
+    const dispatch=useDispatch()
 console.log("latestTrendData",latestTrendData)
     useEffect(()=>{
         const fetchTrendData=async()=>{
@@ -16,6 +18,7 @@ console.log("latestTrendData",latestTrendData)
                 const data=await fetch("https://fakestoreapi.com/products/")
                 const res=await data.json()
                 setLatestTrendData(res)
+                dispatch(setProducts(res))
             } catch (error) {
                 console.log("error",error.messages)
             }
@@ -24,7 +27,6 @@ fetchTrendData()
     },[])
 
     useEffect(()=>{
-        console.log("searchData",searchData)
         
         if(searchData===""){setDataToShow(latestTrendData)}
         if(searchData!==""){

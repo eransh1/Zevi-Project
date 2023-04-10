@@ -1,0 +1,97 @@
+.outerCont{
+position: absolute;
+width: 300px;
+height: 68.5vh;
+/* background-color: red; */
+left: 0;
+padding: 0rem 1rem;
+padding-top: 1rem;
+display: flex;
+flex-direction: column;
+overflow-y: scroll;
+background-color: white;
+transition: transform 1s ease;
+
+}
+
+.outerCont::-webkit-scrollbar {
+    display: none;
+}
+.categoryCont{
+    display: flex;
+    flex-direction: column;
+    width: 100%;   
+}
+
+.categoryTextCont{
+    display: flex;
+    width: 100%;
+    cursor: pointer;
+}
+.categoryTextCont>h1{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #2F3037;
+    width: fit-content;
+    text-transform: uppercase;
+}
+
+.catIcon{
+    font-size: 2rem;
+    color: black;
+    margin-left: auto;
+}
+
+.optionCont{
+    display: flex;
+    flex-direction: column;
+    margin-top: .5rem;
+}
+
+.option{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.checkbox{
+    margin-right: .5rem;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+}
+
+.listItem{
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 300;
+font-size: 16px;
+line-height: 19px;
+text-transform: capitalize;
+
+color: #000000;
+}
+
+
+.priceCont,.ratingCont{
+    display: flex;
+    flex-direction: column;
+    width: 100%; 
+    margin-top: 1rem;  
+}
+
+@media(max-width:1300px){
+   .outerCont{
+    width: 200px;
+    z-index: 5;
+   }
+}
+
+@media(max-width:1050px){
+.outerCont{
+   
+    transform: translateX(-230px);
+}
+}

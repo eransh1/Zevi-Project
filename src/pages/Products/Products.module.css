@@ -1,0 +1,48 @@
+.searchCont{
+    padding-top: 2rem;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.searchText{
+    margin-top: 2rem;
+    margin-left: 2rem;
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 40px;
+line-height: 48px;
+
+color: #000000;
+}
+
+.outerCont{
+    margin-top: 1.5rem;
+    position: relative;
+    width: 100%;
+}
+.expandIcon{
+    font-size: 2rem;
+    z-index: 15;
+    position: absolute;
+    left: 320px;
+    transition: transform 1s ease;
+    cursor: pointer;
+    visibility: hidden;
+}
+@media(max-width:1300px){
+    .expandIcon{
+     left: 220px;
+    }
+ }
+ @media(max-width:1050px){
+    .expandIcon{
+        visibility: visible;
+        transform: translateX(-230px);
+    }
+    }
+@media(max-width:980px){
+   .searchCont{
+    margin-left: 0;
+   } 
+}

@@ -1,0 +1,24 @@
+.outerCont{
+    width: 71%;
+    padding: 1.5rem;
+    height: 63.5vh;
+    position: absolute;
+    right: 1.5rem;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    transition: all .5s ease;
+}
+.outerCont::-webkit-scrollbar {
+    display: none;
+}
+
+@media(max-width:1050px){
+    .outerCont{
+       
+     left: 2rem;
+     width: 80%;
+    }
+    }
