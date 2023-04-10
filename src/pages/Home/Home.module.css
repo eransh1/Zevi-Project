@@ -1,0 +1,24 @@
+.outerCont{
+    width: 100%;
+    height: 100vh;
+    background: url(../../images/bg\ image.jpg);
+    background-position: center;
+  background-repeat: no-repeat; 
+  background-size: cover; 
+}
+.overlay{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(215, 224, 255, 0.26);;
+}
+.searchbarCont{
+    padding-top: 5.5rem;
+    width: 100%;
+    display: flex;
+}
+.latestTrendCont{
+    width: 100%;
+    margin-top: 1rem;
+    height: 75vh;
+    display: flex;
+}

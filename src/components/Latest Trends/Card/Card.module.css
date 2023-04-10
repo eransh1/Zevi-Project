@@ -1,0 +1,12 @@
+.outerCont{
+    display: flex;
+    flex-direction: column;
+    width: 165px;
+height: 253px; 
+background-color: transparent; 
+}
+.cardImage{
+    height: 160px;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}

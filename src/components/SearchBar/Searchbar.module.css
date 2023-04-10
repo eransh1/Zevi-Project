@@ -1,0 +1,35 @@
+.outerCont{
+    width: 60%;
+    background: #FFFFFF;
+    border-radius: 20px;
+    height: 4rem;
+    margin: 0 auto;
+    position: relative;
+}
+.inputSearch{
+    width: 96%;
+    height: 100%;
+    border-radius: 20px;
+    border: none;
+    padding-left: 2rem;
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 2rem;
+line-height: 39px;
+color: rgba(0, 0, 0, 0.4);
+}
+.inputSearch:focus{
+    outline: none;
+}
+.searchIcon{
+    position: absolute;
+    right: 2rem;
+    top: .75rem;
+}
+
+@media(max-width:980px){
+    .outerCont{
+        width: 75%;
+    }
+}
