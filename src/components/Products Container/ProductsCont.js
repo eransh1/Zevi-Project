@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import styles from "./ProductsCont.module.css"
 import Card from './Card/Card'
+import ProductsSkeleton from '../Skeleton/Products Skeleton/ProductsSkeleton'
 
 const ProductsCont = ({products,isExpanded}) => {
     const[favCont,setFavCont]=useState([])
@@ -16,6 +17,9 @@ const ProductsCont = ({products,isExpanded}) => {
     }
   return (
     <section style={{left:isExpanded?"10rem":"",width:isExpanded&&"55%"}} className={styles.outerCont}>
+    {products.length===0&&<ProductsSkeleton cards={4}/>
+
+    }
     {products.map((card)=>{
         return <Card data={card} favCont={favCont} handleLikeIconClick={handleFavContClick}/>
     })}

@@ -4,6 +4,8 @@ import Card from './Card/Card'
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { setProducts } from '../../redux/productsSlice'
+import PopularSkeleton from '../Skeleton/Popular Skeleton/PopularSkeleton'
+import SuggestionSkeleton from '../Skeleton/Suggestions Skeleton/SuggestionSkeleton'
 
 const LatestTrends = () => {
     const navigate=useNavigate()
@@ -24,6 +26,7 @@ console.log("latestTrendData",latestTrendData)
             }
         }
 fetchTrendData()
+// eslint-disable-next-line
     },[])
 
     useEffect(()=>{
@@ -38,6 +41,7 @@ fetchTrendData()
                 },1000)
             
         }
+        // eslint-disable-next-line
     },[searchData,latestTrendData])
 
 function handleSearch(){
@@ -49,6 +53,7 @@ function handleSearch(){
     <section className={styles.outerCont}>
         <h1 className={styles.title}>Latest Trends</h1>
         <div className={styles.cardCont}>
+        {latestTrendData.length===0&&<PopularSkeleton cards={5}/>}
         {
             dataToShow.filter((dat)=>{return dat.category==="women's clothing"}).slice(0,5).map((data)=>{
         return <>
@@ -60,6 +65,7 @@ function handleSearch(){
 
         <h1 className={styles.text}>Popular suggestions</h1>
         <div className={styles.suggestionCont}>
+        {latestTrendData.length===0&&<SuggestionSkeleton cards={5}/>}
         {latestTrendData.slice(0,5).map((item)=>{
             return <p onClick={()=>navigate("/products")} key={item.id} className={styles.desc}>{item?.title}</p>
         })}

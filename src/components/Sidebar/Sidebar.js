@@ -24,8 +24,8 @@ const Sidebar = ({setDataToShow,isExpanded}) => {
     const[isRatClick,setIsRatClick]=useState(true)
     const[filterData,setFilterData]=useState({category:[],price:[],rating:[]})
     const searchData=useSelector((state)=>state.search)
-    console.log("searchData",searchData)
-    console.log(filterData)
+    // console.log("searchData",searchData)
+    // console.log(filterData)
 
 
     //FILTER ON BASIS OF SEARCH
@@ -40,6 +40,7 @@ const Sidebar = ({setDataToShow,isExpanded}) => {
               },1000)
           
         }
+        // eslint-disable-next-line
           },[searchData])
         
           function handleSearch(){
@@ -192,7 +193,7 @@ if(filterData.category.length!==0&&filterData.price.length!==0&&filterData.ratin
    setDataToShow(thirdFilterData)
    return
 }
-
+// eslint-disable-next-line
  },[filterData])   
 
     //GET UNIQUE LIST OF CATEGORY
